@@ -1,20 +1,19 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from './router/Home';
-import Login from './router/Login';
+// import React from "react";
+// import { BrowserRouter, Route, Switch } from "react-router-dom";
+// import Home from "./router/Home";
+// import Login from "./router/Login";
+// import NotFound from "./router/NotFound";
 
+// function Router() {
+//   return (
+//     <BrowserRouter>
+//       <Switch>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/login" element={<Login />} />
+//         <Route path="/*" element={<NotFound />} />
+//       </Switch>
+//     </BrowserRouter>
+//   );
+// }
 
-function Router() {
-  return (
-    <BrowserRouter>
-     <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </BrowserRouter>
-  );
-}
-
-export default Router;
+// export default Router;

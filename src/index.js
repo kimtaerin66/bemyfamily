@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './components/App';
-import styled from 'styled-components';
+import App from './Components/App';
 import { createGlobalStyle } from 'styled-components';
+import { QueryClient, QueryClientProvider } from "react-query";
 
 const GlobalStyle = createGlobalStyle`
 //font
 @font-face {
-     font-family: 'S-CoreDream-3Light';
-     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-family: 'S-CoreDream-4Regular';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
      font-weight: normal;
      font-style: normal;
 }
@@ -53,8 +53,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	font-family: 'S-CoreDream-5Medium';
-	color: #333;
+     font-family: 'S-CoreDream-4Regular';
+	color: #4a4a4a;
 }
 ol, ul {
 	list-style: none;
@@ -71,14 +71,20 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a {
+     text-decoration: none;
+     color: inherit;
+}
 `;
-
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+  <QueryClientProvider client={queryClient}>
     <GlobalStyle />
     <App />
+    </QueryClientProvider>
   </React.StrictMode>
 );
 
