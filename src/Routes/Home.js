@@ -3,10 +3,12 @@ import styled from "styled-components";
 import Search from "./../Components/Search";
 import Slider from './../Components/Slider';
 
+const userWidth = (window.innerWidth)/100 * 80;
 const Container = styled.div`
   margin: 0 auto;
-  width: 1200px;
+  width: ${userWidth}px;
   height: auto;
+
 `;
 
 function Home() {

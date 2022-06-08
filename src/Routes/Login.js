@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { faEyeSlash } from "@fortawesome/free-regular-svg-icons";
-import Join from "./Join";
+
 
 const Container = styled.div`
   width: 100%;
@@ -67,14 +67,15 @@ const JoinD = styled.div`
   color: #747d8c; //gray
 `;
 
+
 function Login() {
   const [see, setSee] = useState(false);
-  const { register, handleSubmit } = useForm();
+  const { register, watch, handleSubmit } = useForm();
   const onClick = () => {
     setSee((prev)=> !prev);
   }
   const onValid = () => {
-    //로그인되면 home으로보내기
+    //아이디 비밀번호 확인하기
   };
   return (
     <Container>
@@ -97,7 +98,7 @@ function Login() {
         </PWdiv>
         <Submit type="submit" value="로그인" />
       </Form>
-      <Link to={<Join />}>
+      <Link to="/join">
         <JoinD>회원가입</JoinD>
       </Link>
     </Container>
